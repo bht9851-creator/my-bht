@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تقرير تنفيذ برنامج مدرستي</title>
+    <style>
+        /* إعدادات الخطوط والألوان الأساسية */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* حاوية الصفحة A4 */
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            padding: 20mm;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* الهيدر */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #1a7b82;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .editable-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a7b82;
+            outline: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .logo-box img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* الأقسام */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            background: #f8fbfc;
+            border-right: 5px solid #1a7b82;
+            padding: 8px 15px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-area {
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 100px;
+            outline: none;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        /* شبكة الصور */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .photo-item {
+            border: 2px dashed #ddd;
+            height: 220px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-color: #fafafa;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .upload-trigger {
+            cursor: pointer;
+            text-align: center;
+            color: #999;
+        }
+
+        /* التوقيعات */
+        .footer-signatures {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .sig-box {
+            width: 200px;
+        }
+
+        .sig-line {
+            margin-top: 10px;
+            border-bottom: 1px solid #000;
+            min-height: 25px;
+            outline: none;
+        }
+
+        /* زر الطباعة */
+        .no-print-zone {
+            margin-bottom: 20px;
+        }
+
+        .btn-print {
+            background: #1a7b82;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* تنسيق الطباعة */
+        @media print {
+            body { background: white; padding: 0; }
+            .no-print-zone { display: none; }
+            .a4-page { box-shadow: none; border: none; width: 100%; padding: 10mm; }
+            .photo-item { border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-zone">
+        <button class="btn-print" onclick="window.print()">طباعة التقرير PDF</button>
+        <p style="font-size: 13px; color: #666; margin-top: 10px;">* اضغط على أي نص لتعديله، واضغط على المربعات لإضافة صور.</p>
+    </div>
+
+    <div class="a4-page">
+        <div class="header">
+            <div class="header-info">
+                <div class="editable-title" contenteditable="true">تقرير تنفيذ برنامج مدرستي</div>
+                <div contenteditable="true" style="color: #666;">العام الدراسي: 1447 هـ</div>
+            </div>
+            <div class="logo-box">
+                <!-- شعار افتراضي -->
+                <img src="https://upload.wikimedia.org/wikipedia/ar/archive/a/a2/20211116120800%21Ministry_of_Education_Saudi_Arabia_Logo.png" alt="Logo">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📝 وصف البرنامج والأهداف</div>
+            <div class="content-area" contenteditable="true">
+                اكتب هنا ملخصاً عن البرنامج المنفذ، الأهداف التي تحققت، والفئة المستهدفة من الطلاب أو المعلمين...
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📸 شواهد الصور</div>
+            <div class="photo-grid">
+                <div class="photo-item" onclick="document.getElementById('f1').click()">
+                    <div class="upload-trigger">اضغط لإضافة صورة</div>
+                    <input type="file" id="f1" hidden onchange="showImg(this)">
+                    <img src="">
+                </div>
+                <div class="photo-item" onclick="document.getElementById('f2').click()">
+                    <div class="upload-trigger">اضغط لإضافة صورة</div>
+                    <input type="file" id="f2" hidden onchange="showImg(this)">
+                    <img src="">
+                </div>
+                <div class="photo-item" onclick="document.getElementById('f3').click()">
+                    <div class="upload-trigger">اضغط لإضافة صورة</div>
+                    <input type="file" id="f3" hidden onchange="showImg(this)">
+                    <img src="">
+                </div>
+                <div class="photo-item" onclick="document.getElementById('f4').click()">
+                    <div class="upload-trigger">اضغط لإضافة صورة</div>
+                    <input type="file" id="f4" hidden onchange="showImg(this)">
+                    <img src="">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-signatures">
+            <div class="sig-box">
+                <strong>مدير المدرسة</strong>
+                <div class="sig-line" contenteditable="true">أ. محمد بن عبدالله</div>
+            </div>
+            <div class="sig-box">
+                <strong>معد التقرير</strong>
+                <div class="sig-line" contenteditable="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showImg(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var container = input.closest('.photo-item');
+                    var img = container.querySelector('img');
+                    var text = container.querySelector('.upload-trigger');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    text.style.display = 'none';
+                    container.style.border = 'none';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html> 
