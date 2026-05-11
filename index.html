@@ -1,372 +1,1306 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Geeza Pro'; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 12.0px 'Geeza Pro'; font-kerning: none}
-    span.s3 {font: 12.0px Times; font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="ar" dir="rtl"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;</span><span class="s2">تقرير</span><span class="s1"> </span><span class="s2">تنفيذ</span><span class="s1"> </span><span class="s2">برنامج</span><span class="s1"> </span><span class="s2">مدرستي</span><span class="s1">&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- </span><span class="s2">استيراد</span><span class="s1"> </span><span class="s2">خط</span><span class="s1"> Tajawal </span><span class="s2">من</span><span class="s1"> Google Fonts --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- </span><span class="s2">أيقونات</span><span class="s1"> FontAwesome --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--primary-color: #1a7b82; /* </span><span class="s2">لون</span><span class="s1"> </span><span class="s2">مستوحى</span><span class="s1"> </span><span class="s2">من</span><span class="s1"> </span><span class="s2">هوية</span><span class="s1"> </span><span class="s2">الوزارة</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--secondary-color: #f4f7f6;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--text-dark: #333;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--border-color: #e0e0e0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>* {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-print-color-adjust: exact;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Tajawal', sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #525659;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-dark);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">تنسيق</span><span class="s1"> </span><span class="s2">صفحة</span><span class="s1"> A4 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.page {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 210mm;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 297mm;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15mm;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px rgba(0,0,0,0.3);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">الهيدر</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: space-between;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid var(--primary-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-bottom: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.header-right {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.logo-placeholder {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 120px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.program-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 22px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--primary-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px dashed transparent;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: 0.3s;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.program-title:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: #ccc;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fafafa;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">الأقسام</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>section {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.section-header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--primary-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">وصف</span><span class="s1"> </span><span class="s2">البرنامج</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.description-box {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 120px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid var(--border-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--secondary-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.8;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: justify;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">شبكة</span><span class="s1"> </span><span class="s2">الصور</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.image-grid {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(2, 1fr);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.image-card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px dashed #aaa;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 200px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow: hidden;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fdfdfd;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.image-card img {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>object-fit: cover;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.upload-label {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #888;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: 0.3s;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.upload-label i {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 24px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.upload-label:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--primary-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="file"] {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">الفوتر</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: space-between;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-top: 40px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-top: 1px solid var(--border-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.signature-box {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-width: 150px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.signature-label {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.editable-name {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-width: 100px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #ccc;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">زر</span><span class="s1"> </span><span class="s2">الطباعة</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.print-btn {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>bottom: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>left: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 25px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--primary-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 50px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Tajawal';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0,0,0,0.2);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 1000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.print-btn:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #145e63;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* </span><span class="s2">إعدادات</span><span class="s1"> </span><span class="s2">الطباعة</span><span class="s1"> */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media print {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>background: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>padding: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.page {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>box-shadow: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.print-btn, .upload-label, .fa-camera {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>display: none !important;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.image-card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>border: 1px solid var(--border-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.image-card:has(img[style*="display: block"]) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="print-btn" onclick="window.print()"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;i class="fas fa-print"&gt;&lt;/i&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">طباعة</span><span class="s3"> </span><span class="s1">التقرير</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/button&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="page"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">الهيدر</span><span class="s1"> --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="header-right"&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">                </span>&lt;!-- </span><span class="s1">شعار</span><span class="s3"> </span><span class="s1">افتراضي</span><span class="s3"> </span><span class="s1">للوزارة</span><span class="s3"> - </span><span class="s1">يمكن</span><span class="s3"> </span><span class="s1">استبداله</span><span class="s3"> </span><span class="s1">برابط</span><span class="s3"> </span><span class="s1">مباشر</span><span class="s3"> --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;img src="https://upload.wikimedia.org/wikipedia/ar/archive/a/a2/20211116120800%21Ministry_of_Education_Saudi_Arabia_Logo.png" alt="</span><span class="s2">شعار</span><span class="s1"> </span><span class="s2">الوزارة</span><span class="s1">" class="logo-placeholder"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="program-title" contenteditable="true"&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">تقرير</span><span class="s3"> </span><span class="s1">برنامج</span><span class="s3">: (</span><span class="s1">اكتب</span><span class="s3"> </span><span class="s1">اسم</span><span class="s3"> </span><span class="s1">البرنامج</span><span class="s3"> </span><span class="s1">هنا</span><span class="s3">)</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div style="text-align: left; font-size: 12px; color: #666;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">التاريخ</span><span class="s1">: &lt;span contenteditable="true"&gt;24 / 10 / 1447 </span><span class="s2">هـ</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">وصف</span><span class="s1"> </span><span class="s2">البرنامج</span><span class="s1"> --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="section-header"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-info-circle"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span&gt;</span><span class="s2">وصف</span><span class="s1"> </span><span class="s2">وتفاصيل</span><span class="s1"> </span><span class="s2">البرنامج</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="description-box" contenteditable="true"&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">هذا</span><span class="s3"> </span><span class="s1">النص</span><span class="s3"> </span><span class="s1">تجريبي،</span><span class="s3"> </span><span class="s1">يمكنك</span><span class="s3"> </span><span class="s1">حذفه</span><span class="s3"> </span><span class="s1">وكتابة</span><span class="s3"> </span><span class="s1">وصف</span><span class="s3"> </span><span class="s1">كامل</span><span class="s3"> </span><span class="s1">للبرنامج</span><span class="s3"> </span><span class="s1">المنفذ</span><span class="s3"> </span><span class="s1">في</span><span class="s3"> </span><span class="s1">المدرسة،</span><span class="s3"> </span><span class="s1">متضمناً</span><span class="s3"> </span><span class="s1">الأهداف،</span><span class="s3"> </span><span class="s1">الفئة</span><span class="s3"> </span><span class="s1">المستهدفة،</span><span class="s3"> </span><span class="s1">وأبرز</span><span class="s3"> </span><span class="s1">المخرجات</span><span class="s3"> </span><span class="s1">التي</span><span class="s3"> </span><span class="s1">تم</span><span class="s3"> </span><span class="s1">تحقيقها</span><span class="s3"> </span><span class="s1">خلال</span><span class="s3"> </span><span class="s1">فترة</span><span class="s3"> </span><span class="s1">التنفيذ</span><span class="s3">. </span><span class="s1">تم</span><span class="s3"> </span><span class="s1">تصميم</span><span class="s3"> </span><span class="s1">هذا</span><span class="s3"> </span><span class="s1">النموذج</span><span class="s3"> </span><span class="s1">ليكون</span><span class="s3"> </span><span class="s1">مرناً</span><span class="s3"> </span><span class="s1">وسهلاً</span><span class="s3"> </span><span class="s1">للاستخدام</span><span class="s3"> </span><span class="s1">الإداري</span><span class="s3">.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">الصور</span><span class="s1"> --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="section-header"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-images"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span&gt;</span><span class="s2">شواهد</span><span class="s1"> </span><span class="s2">التنفيذ</span><span class="s1"> (</span><span class="s2">الصور</span><span class="s1">)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="image-grid"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- </span><span class="s2">مربع</span><span class="s1"> </span><span class="s2">صورة</span><span class="s1"> 1 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="image-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label class="upload-label"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-camera"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s2">إرفاق</span><span class="s1"> </span><span class="s2">صورة</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="file" accept="image/*" onchange="previewImage(event, this)"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="" alt="</span><span class="s2">المعاينة</span><span class="s1">"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- </span><span class="s2">مربع</span><span class="s1"> </span><span class="s2">صورة</span><span class="s1"> 2 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="image-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label class="upload-label"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-camera"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s2">إرفاق</span><span class="s1"> </span><span class="s2">صورة</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="file" accept="image/*" onchange="previewImage(event, this)"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="" alt="</span><span class="s2">المعاينة</span><span class="s1">"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- </span><span class="s2">مربع</span><span class="s1"> </span><span class="s2">صورة</span><span class="s1"> 3 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="image-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label class="upload-label"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-camera"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s2">إرفاق</span><span class="s1"> </span><span class="s2">صورة</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="file" accept="image/*" onchange="previewImage(event, this)"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="" alt="</span><span class="s2">المعاينة</span><span class="s1">"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- </span><span class="s2">مربع</span><span class="s1"> </span><span class="s2">صورة</span><span class="s1"> 4 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="image-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label class="upload-label"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-camera"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s2">إرفاق</span><span class="s1"> </span><span class="s2">صورة</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="file" accept="image/*" onchange="previewImage(event, this)"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="" alt="</span><span class="s2">المعاينة</span><span class="s1">"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">التوقيعات</span><span class="s1"> --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="signature-box"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="signature-label"&gt;</span><span class="s2">مدير</span><span class="s1"> </span><span class="s2">المدرسة</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="editable-name" contenteditable="true"&gt;</span><span class="s2">أ</span><span class="s1">. </span><span class="s2">محمد</span><span class="s1"> </span><span class="s2">بن</span><span class="s1"> </span><span class="s2">عبدالله</span><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="signature-box"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="signature-label"&gt;</span><span class="s2">معد</span><span class="s1"> </span><span class="s2">التقرير</span><span class="s1">&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="editable-name" contenteditable="true"&gt;</span><span class="s2">أ</span><span class="s1">. (</span><span class="s2">اكتب</span><span class="s1"> </span><span class="s2">الاسم</span><span class="s1"> </span><span class="s2">هنا</span><span class="s1">)&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span>// </span><span class="s1">دالة</span><span class="s3"> </span><span class="s1">لمعاينة</span><span class="s3"> </span><span class="s1">الصور</span><span class="s3"> </span><span class="s1">المرفوعة</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function previewImage(event, input) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const file = event.target.files[0];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (file) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const reader = new FileReader();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const card = input.closest('.image-card');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const img = card.querySelector('img');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const label = card.querySelector('.upload-label');</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>reader.onload = function(e) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>img.src = e.target.result;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>img.style.display = 'block';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>label.style.display = 'none';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>reader.readAsDataURL(file);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span>// </span><span class="s1">تنبيه</span><span class="s3"> </span><span class="s1">بسيط</span><span class="s3"> </span><span class="s1">عند</span><span class="s3"> </span><span class="s1">فتح</span><span class="s3"> </span><span class="s1">الصفحة</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.onload = () =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>console.log("</span><span class="s2">التقرير</span><span class="s1"> </span><span class="s2">جاهز</span><span class="s1"> </span><span class="s2">للتعديل</span><span class="s1"> </span><span class="s2">والطباعة</span><span class="s1">.");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
-</html>
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset178 GeezaPro;\f2\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh10200\viewkind0
+\pard\tqr\tx566\tqr\tx1133\tqr\tx1700\tqr\tx2267\tqr\tx2834\tqr\tx3401\tqr\tx3968\tqr\tx4535\tqr\tx5102\tqr\tx5669\tqr\tx6236\tqr\tx6803\pardirnatural\qr\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE
+\f1  
+\f0 html>
+\f1 \
+
+\f0 <html
+\f1  
+\f0 lang="ar"
+\f1  
+\f0 dir="rtl">
+\f1 \
+
+\f0 <head>
+\f1 \
+    
+\f0 <meta
+\f1  
+\f0 charset="UTF-8">
+\f1 \
+    
+\f0 <title>
+\f1 \'ca\'de\'d1\'ed\'d1 \'ca\'e4\'dd\'ed\'d0 \'c8\'d1\'e4\'c7\'e3\'cc \'e3\'cf\'d1\'d3\'ca\'ed
+\f0 </title>
+\f1 \
+    
+\f0 <style>
+\f1 \
+        
+\f0 /*
+\f1  \'c5\'da\'cf\'c7\'cf\'c7\'ca \'c7\'e1\'ce\'d8\'e6\'d8 \'e6\'c7\'e1\'c3\'e1\'e6\'c7\'e4 \'c7\'e1\'c3\'d3\'c7\'d3\'ed\'c9 
+\f0 */
+\f1 \
+        
+\f0 body
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 font-family:
+\f1  
+\f0 'Segoe
+\f1  
+\f0 UI',
+\f1  
+\f0 Tahoma,
+\f1  
+\f0 Geneva,
+\f1  
+\f0 Verdana,
+\f1  
+\f0 sans-serif;
+\f1 \
+            
+\f0 background-color:
+\f1  
+\f0 #f0f2f5;
+\f1 \
+            
+\f0 margin:
+\f1  
+\f0 0;
+\f1 \
+            
+\f0 padding:
+\f1  
+\f0 20px;
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 flex;
+\f1 \
+            
+\f0 flex-direction:
+\f1  
+\f0 column;
+\f1 \
+            
+\f0 align-items:
+\f1  
+\f0 center;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'cd\'c7\'e6\'ed\'c9 \'c7\'e1\'d5\'dd\'cd\'c9 
+\f0 A4
+\f1  
+\f0 */
+\f1 \
+        .
+\f0 a4-page
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 width:
+\f1  
+\f0 210mm;
+\f1 \
+            
+\f0 min-height:
+\f1  
+\f0 297mm;
+\f1 \
+            
+\f0 background:
+\f1  
+\f0 white;
+\f1 \
+            
+\f0 padding:
+\f1  
+\f0 20mm;
+\f1 \
+            
+\f0 box-shadow:
+\f1  
+\f0 0
+\f1  
+\f0 0
+\f1  
+\f0 15px
+\f1  
+\f0 rgba(0,0,0,0
+\f1 .
+\f0 1);
+\f1 \
+            
+\f0 position:
+\f1  
+\f0 relative;
+\f1 \
+            
+\f0 box-sizing:
+\f1  
+\f0 border-box;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'c7\'e1\'e5\'ed\'cf\'d1 
+\f0 */
+\f1 \
+        .
+\f0 header
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 flex;
+\f1 \
+            
+\f0 justify-content:
+\f1  
+\f0 space-between;
+\f1 \
+            
+\f0 align-items:
+\f1  
+\f0 center;
+\f1 \
+            
+\f0 border-bottom:
+\f1  
+\f0 3px
+\f1  
+\f0 solid
+\f1  
+\f0 #1a7b82;
+\f1 \
+            
+\f0 padding-bottom:
+\f1  
+\f0 20px;
+\f1 \
+            
+\f0 margin-bottom:
+\f1  
+\f0 30px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 header-info
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 flex:
+\f1  
+\f0 1;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 editable-title
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 font-size:
+\f1  
+\f0 24px;
+\f1 \
+            
+\f0 font-weight:
+\f1  
+\f0 bold;
+\f1 \
+            
+\f0 color:
+\f1  
+\f0 #1a7b82;
+\f1 \
+            
+\f0 outline:
+\f1  
+\f0 none;
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 block;
+\f1 \
+            
+\f0 margin-bottom:
+\f1  
+\f0 5px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 logo-box
+\f1  
+\f0 img
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 max-width:
+\f1  
+\f0 150px;
+\f1 \
+            
+\f0 height:
+\f1  
+\f0 auto;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'c7\'e1\'c3\'de\'d3\'c7\'e3 
+\f0 */
+\f1 \
+        .
+\f0 section
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 margin-bottom:
+\f1  
+\f0 30px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 section-title
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 background:
+\f1  
+\f0 #f8fbfc;
+\f1 \
+            
+\f0 border-right:
+\f1  
+\f0 5px
+\f1  
+\f0 solid
+\f1  
+\f0 #1a7b82;
+\f1 \
+            
+\f0 padding:
+\f1  
+\f0 8px
+\f1  
+\f0 15px;
+\f1 \
+            
+\f0 font-weight:
+\f1  
+\f0 bold;
+\f1 \
+            
+\f0 color:
+\f1  
+\f0 #333;
+\f1 \
+            
+\f0 margin-bottom:
+\f1  
+\f0 15px;
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 flex;
+\f1 \
+            
+\f0 align-items:
+\f1  
+\f0 center;
+\f1 \
+            
+\f0 gap:
+\f1  
+\f0 10px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 content-area
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 border:
+\f1  
+\f0 1px
+\f1  
+\f0 solid
+\f1  
+\f0 #eee;
+\f1 \
+            
+\f0 padding:
+\f1  
+\f0 15px;
+\f1 \
+            
+\f0 border-radius:
+\f1  
+\f0 5px;
+\f1 \
+            
+\f0 min-height:
+\f1  
+\f0 100px;
+\f1 \
+            
+\f0 outline:
+\f1  
+\f0 none;
+\f1 \
+            
+\f0 line-height:
+\f1  
+\f0 1
+\f1 .
+\f0 6;
+\f1 \
+            
+\f0 color:
+\f1  
+\f0 #444;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'d4\'c8\'df\'c9 \'c7\'e1\'d5\'e6\'d1 
+\f0 */
+\f1 \
+        .
+\f0 photo-grid
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 grid;
+\f1 \
+            
+\f0 grid-template-columns:
+\f1  
+\f0 repeat(2,
+\f1  
+\f0 1fr);
+\f1 \
+            
+\f0 gap:
+\f1  
+\f0 20px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 photo-item
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 border:
+\f1  
+\f0 2px
+\f1  
+\f0 dashed
+\f1  
+\f0 #ddd;
+\f1 \
+            
+\f0 height:
+\f1  
+\f0 220px;
+\f1 \
+            
+\f0 border-radius:
+\f1  
+\f0 8px;
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 flex;
+\f1 \
+            
+\f0 align-items:
+\f1  
+\f0 center;
+\f1 \
+            
+\f0 justify-content:
+\f1  
+\f0 center;
+\f1 \
+            
+\f0 position:
+\f1  
+\f0 relative;
+\f1 \
+            
+\f0 overflow:
+\f1  
+\f0 hidden;
+\f1 \
+            
+\f0 background-color:
+\f1  
+\f0 #fafafa;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 photo-item
+\f1  
+\f0 img
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 width:
+\f1  
+\f0 100%;
+\f1 \
+            
+\f0 height:
+\f1  
+\f0 100%;
+\f1 \
+            
+\f0 object-fit:
+\f1  
+\f0 cover;
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 none;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 upload-trigger
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 cursor:
+\f1  
+\f0 pointer;
+\f1 \
+            
+\f0 text-align:
+\f1  
+\f0 center;
+\f1 \
+            
+\f0 color:
+\f1  
+\f0 #999;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'c7\'e1\'ca\'e6\'de\'ed\'da\'c7\'ca 
+\f0 */
+\f1 \
+        .
+\f0 footer-signatures
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 margin-top:
+\f1  
+\f0 50px;
+\f1 \
+            
+\f0 display:
+\f1  
+\f0 flex;
+\f1 \
+            
+\f0 justify-content:
+\f1  
+\f0 space-between;
+\f1 \
+            
+\f0 text-align:
+\f1  
+\f0 center;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 sig-box
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 width:
+\f1  
+\f0 200px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 sig-line
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 margin-top:
+\f1  
+\f0 10px;
+\f1 \
+            
+\f0 border-bottom:
+\f1  
+\f0 1px
+\f1  
+\f0 solid
+\f1  
+\f0 #000;
+\f1 \
+            
+\f0 min-height:
+\f1  
+\f0 25px;
+\f1 \
+            
+\f0 outline:
+\f1  
+\f0 none;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'d2\'d1 \'c7\'e1\'d8\'c8\'c7\'da\'c9 
+\f0 */
+\f1 \
+        .
+\f0 no-print-zone
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 margin-bottom:
+\f1  
+\f0 20px;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        .
+\f0 btn-print
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 background:
+\f1  
+\f0 #1a7b82;
+\f1 \
+            
+\f0 color:
+\f1  
+\f0 white;
+\f1 \
+            
+\f0 padding:
+\f1  
+\f0 12px
+\f1  
+\f0 30px;
+\f1 \
+            
+\f0 border:
+\f1  
+\f0 none;
+\f1 \
+            
+\f0 border-radius:
+\f1  
+\f0 5px;
+\f1 \
+            
+\f0 cursor:
+\f1  
+\f0 pointer;
+\f1 \
+            
+\f0 font-size:
+\f1  
+\f0 16px;
+\f1 \
+            
+\f0 font-weight:
+\f1  
+\f0 bold;
+\f1 \
+        
+\f0 \}
+\f1 \
+\
+        
+\f0 /*
+\f1  \'ca\'e4\'d3\'ed\'de \'c7\'e1\'d8\'c8\'c7\'da\'c9 
+\f0 */
+\f1 \
+        
+\f0 @media
+\f1  
+\f0 print
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 body
+\f1  
+\f0 \{
+\f1  
+\f0 background:
+\f1  
+\f0 white;
+\f1  
+\f0 padding:
+\f1  
+\f0 0;
+\f1  
+\f0 \}
+\f1 \
+            .
+\f0 no-print-zone
+\f1  
+\f0 \{
+\f1  
+\f0 display:
+\f1  
+\f0 none;
+\f1  
+\f0 \}
+\f1 \
+            .
+\f0 a4-page
+\f1  
+\f0 \{
+\f1  
+\f0 box-shadow:
+\f1  
+\f0 none;
+\f1  
+\f0 border:
+\f1  
+\f0 none;
+\f1  
+\f0 width:
+\f1  
+\f0 100%;
+\f1  
+\f0 padding:
+\f1  
+\f0 10mm;
+\f1  
+\f0 \}
+\f1 \
+            .
+\f0 photo-item
+\f1  
+\f0 \{
+\f1  
+\f0 border:
+\f1  
+\f0 1px
+\f1  
+\f0 solid
+\f1  
+\f0 #eee;
+\f1  
+\f0 \}
+\f1 \
+        
+\f0 \}
+\f1 \
+    
+\f0 </style>
+\f1 \
+
+\f0 </head>
+\f1 \
+
+\f0 <body>
+\f1 \
+\
+    
+\f0 <div
+\f1  
+\f0 class="no-print-zone">
+\f1 \
+        
+\f0 <button
+\f1  
+\f0 class="btn-print"
+\f1  
+\f0 onclick="window
+\f1 .
+\f0 print()">
+\f1 \'d8\'c8\'c7\'da\'c9 \'c7\'e1\'ca\'de\'d1\'ed\'d1 
+\f0 PDF</button>
+\f1 \
+        
+\f0 <p
+\f1  
+\f0 style="font-size:
+\f1  
+\f0 13px;
+\f1  
+\f0 color:
+\f1  
+\f0 #666;
+\f1  
+\f0 margin-top:
+\f1  
+\f0 10px;">*
+\f1  \'c7\'d6\'db\'d8 \'da\'e1\'ec \'c3\'ed \'e4\'d5 \'e1\'ca\'da\'cf\'ed\'e1\'e5\'a1 \'e6\'c7\'d6\'db\'d8 \'da\'e1\'ec \'c7\'e1\'e3\'d1\'c8\'da\'c7\'ca \'e1\'c5\'d6\'c7\'dd\'c9 \'d5\'e6\'d1.
+\f0 </p>
+\f1 \
+    
+\f0 </div>
+\f1 \
+\
+    
+\f0 <div
+\f1  
+\f0 class="a4-page">
+\f1 \
+        
+\f0 <div
+\f1  
+\f0 class="header">
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="header-info">
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="editable-title"
+\f1  
+\f0 contenteditable="true">
+\f1 \'ca\'de\'d1\'ed\'d1 \'ca\'e4\'dd\'ed\'d0 \'c8\'d1\'e4\'c7\'e3\'cc \'e3\'cf\'d1\'d3\'ca\'ed
+\f0 </div>
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 contenteditable="true"
+\f1  
+\f0 style="color:
+\f1  
+\f0 #666;">
+\f1 \'c7\'e1\'da\'c7\'e3 \'c7\'e1\'cf\'d1\'c7\'d3\'ed
+\f0 :
+\f1  
+\f0 1447
+\f1  \'e5\'dc
+\f0 </div>
+\f1 \
+            
+\f0 </div>
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="logo-box">
+\f1 \
+                
+\f0 <!--
+\f1  \'d4\'da\'c7\'d1 \'c7\'dd\'ca\'d1\'c7\'d6\'ed 
+\f0 -->
+\f1 \
+                
+\f0 <img
+\f1  
+\f0 src="https://upload
+\f1 .
+\f0 wikimedia
+\f1 .
+\f0 org/wikipedia/ar/archive/a/a2/20211116120800%21Ministry_of_Education_Saudi_Arabia_Logo
+\f1 .
+\f0 png"
+\f1  
+\f0 alt="Logo">
+\f1 \
+            
+\f0 </div>
+\f1 \
+        
+\f0 </div>
+\f1 \
+\
+        
+\f0 <div
+\f1  
+\f0 class="section">
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="section-title">
+\f2 \uc0\u55357 \u56541 
+\f1  \'e6\'d5\'dd \'c7\'e1\'c8\'d1\'e4\'c7\'e3\'cc \'e6\'c7\'e1\'c3\'e5\'cf\'c7\'dd
+\f0 </div>
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="content-area"
+\f1  
+\f0 contenteditable="true">
+\f1 \
+                \'c7\'df\'ca\'c8 \'e5\'e4\'c7 \'e3\'e1\'ce\'d5\'c7\'f0 \'da\'e4 \'c7\'e1\'c8\'d1\'e4\'c7\'e3\'cc \'c7\'e1\'e3\'e4\'dd\'d0\'a1 \'c7\'e1\'c3\'e5\'cf\'c7\'dd \'c7\'e1\'ca\'ed \'ca\'cd\'de\'de\'ca\'a1 \'e6\'c7\'e1\'dd\'c6\'c9 \'c7\'e1\'e3\'d3\'ca\'e5\'cf\'dd\'c9 \'e3\'e4 \'c7\'e1\'d8\'e1\'c7\'c8 \'c3\'e6 \'c7\'e1\'e3\'da\'e1\'e3\'ed\'e4...\
+            
+\f0 </div>
+\f1 \
+        
+\f0 </div>
+\f1 \
+\
+        
+\f0 <div
+\f1  
+\f0 class="section">
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="section-title">
+\f2 \uc0\u55357 \u56568 
+\f1  \'d4\'e6\'c7\'e5\'cf \'c7\'e1\'d5\'e6\'d1
+\f0 </div>
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="photo-grid">
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="photo-item"
+\f1  
+\f0 onclick="document
+\f1 .
+\f0 getElementById('f1')
+\f1 .
+\f0 click()">
+\f1 \
+                    
+\f0 <div
+\f1  
+\f0 class="upload-trigger">
+\f1 \'c7\'d6\'db\'d8 \'e1\'c5\'d6\'c7\'dd\'c9 \'d5\'e6\'d1\'c9
+\f0 </div>
+\f1 \
+                    
+\f0 <input
+\f1  
+\f0 type="file"
+\f1  
+\f0 id="f1"
+\f1  
+\f0 hidden
+\f1  
+\f0 onchange="showImg(this)">
+\f1 \
+                    
+\f0 <img
+\f1  
+\f0 src="">
+\f1 \
+                
+\f0 </div>
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="photo-item"
+\f1  
+\f0 onclick="document
+\f1 .
+\f0 getElementById('f2')
+\f1 .
+\f0 click()">
+\f1 \
+                    
+\f0 <div
+\f1  
+\f0 class="upload-trigger">
+\f1 \'c7\'d6\'db\'d8 \'e1\'c5\'d6\'c7\'dd\'c9 \'d5\'e6\'d1\'c9
+\f0 </div>
+\f1 \
+                    
+\f0 <input
+\f1  
+\f0 type="file"
+\f1  
+\f0 id="f2"
+\f1  
+\f0 hidden
+\f1  
+\f0 onchange="showImg(this)">
+\f1 \
+                    
+\f0 <img
+\f1  
+\f0 src="">
+\f1 \
+                
+\f0 </div>
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="photo-item"
+\f1  
+\f0 onclick="document
+\f1 .
+\f0 getElementById('f3')
+\f1 .
+\f0 click()">
+\f1 \
+                    
+\f0 <div
+\f1  
+\f0 class="upload-trigger">
+\f1 \'c7\'d6\'db\'d8 \'e1\'c5\'d6\'c7\'dd\'c9 \'d5\'e6\'d1\'c9
+\f0 </div>
+\f1 \
+                    
+\f0 <input
+\f1  
+\f0 type="file"
+\f1  
+\f0 id="f3"
+\f1  
+\f0 hidden
+\f1  
+\f0 onchange="showImg(this)">
+\f1 \
+                    
+\f0 <img
+\f1  
+\f0 src="">
+\f1 \
+                
+\f0 </div>
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="photo-item"
+\f1  
+\f0 onclick="document
+\f1 .
+\f0 getElementById('f4')
+\f1 .
+\f0 click()">
+\f1 \
+                    
+\f0 <div
+\f1  
+\f0 class="upload-trigger">
+\f1 \'c7\'d6\'db\'d8 \'e1\'c5\'d6\'c7\'dd\'c9 \'d5\'e6\'d1\'c9
+\f0 </div>
+\f1 \
+                    
+\f0 <input
+\f1  
+\f0 type="file"
+\f1  
+\f0 id="f4"
+\f1  
+\f0 hidden
+\f1  
+\f0 onchange="showImg(this)">
+\f1 \
+                    
+\f0 <img
+\f1  
+\f0 src="">
+\f1 \
+                
+\f0 </div>
+\f1 \
+            
+\f0 </div>
+\f1 \
+        
+\f0 </div>
+\f1 \
+\
+        
+\f0 <div
+\f1  
+\f0 class="footer-signatures">
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="sig-box">
+\f1 \
+                
+\f0 <strong>
+\f1 \'e3\'cf\'ed\'d1 \'c7\'e1\'e3\'cf\'d1\'d3\'c9
+\f0 </strong>
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="sig-line"
+\f1  
+\f0 contenteditable="true">
+\f1 \'c3. \'e3\'cd\'e3\'cf \'c8\'e4 \'da\'c8\'cf\'c7\'e1\'e1\'e5
+\f0 </div>
+\f1 \
+            
+\f0 </div>
+\f1 \
+            
+\f0 <div
+\f1  
+\f0 class="sig-box">
+\f1 \
+                
+\f0 <strong>
+\f1 \'e3\'da\'cf \'c7\'e1\'ca\'de\'d1\'ed\'d1
+\f0 </strong>
+\f1 \
+                
+\f0 <div
+\f1  
+\f0 class="sig-line"
+\f1  
+\f0 contenteditable="true"></div>
+\f1 \
+            
+\f0 </div>
+\f1 \
+        
+\f0 </div>
+\f1 \
+    
+\f0 </div>
+\f1 \
+\
+    
+\f0 <script>
+\f1 \
+        
+\f0 function
+\f1  
+\f0 showImg(input)
+\f1  
+\f0 \{
+\f1 \
+            
+\f0 if
+\f1  
+\f0 (input
+\f1 .
+\f0 files
+\f1  
+\f0 &&
+\f1  
+\f0 input
+\f1 .
+\f0 files[0])
+\f1  
+\f0 \{
+\f1 \
+                
+\f0 var
+\f1  
+\f0 reader
+\f1  
+\f0 =
+\f1  
+\f0 new
+\f1  
+\f0 FileReader();
+\f1 \
+                
+\f0 reader
+\f1 .
+\f0 onload
+\f1  
+\f0 =
+\f1  
+\f0 function(e)
+\f1  
+\f0 \{
+\f1 \
+                    
+\f0 var
+\f1  
+\f0 container
+\f1  
+\f0 =
+\f1  
+\f0 input
+\f1 .
+\f0 closest('
+\f1 .
+\f0 photo-item');
+\f1 \
+                    
+\f0 var
+\f1  
+\f0 img
+\f1  
+\f0 =
+\f1  
+\f0 container
+\f1 .
+\f0 querySelector('img');
+\f1 \
+                    
+\f0 var
+\f1  
+\f0 text
+\f1  
+\f0 =
+\f1  
+\f0 container
+\f1 .
+\f0 querySelector('
+\f1 .
+\f0 upload-trigger');
+\f1 \
+                    
+\f0 img
+\f1 .
+\f0 src
+\f1  
+\f0 =
+\f1  
+\f0 e
+\f1 .
+\f0 target
+\f1 .
+\f0 result;
+\f1 \
+                    
+\f0 img
+\f1 .
+\f0 style
+\f1 .
+\f0 display
+\f1  
+\f0 =
+\f1  
+\f0 'block';
+\f1 \
+                    
+\f0 text
+\f1 .
+\f0 style
+\f1 .
+\f0 display
+\f1  
+\f0 =
+\f1  
+\f0 'none';
+\f1 \
+                    
+\f0 container
+\f1 .
+\f0 style
+\f1 .
+\f0 border
+\f1  
+\f0 =
+\f1  
+\f0 'none';
+\f1 \
+                
+\f0 \};
+\f1 \
+                
+\f0 reader
+\f1 .
+\f0 readAsDataURL(input
+\f1 .
+\f0 files[0]);
+\f1 \
+            
+\f0 \}
+\f1 \
+        
+\f0 \}
+\f1 \
+    
+\f0 </script>
+\f1 \
+
+\f0 </body>
+\f1 \
+
+\f0 </html>}
